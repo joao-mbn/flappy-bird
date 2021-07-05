@@ -1,0 +1,18 @@
+<div class="container">
+  <nav>
+    <button routerLink="/home" routerLinkActive="active"
+    class="material-icons">
+    pause
+    </button>
+    <button (click)="volumeSwitcher()" class="material-icons">
+      <div *ngIf="volumeOn; then VolOn else VolOff"></div>
+      <ng-template #VolOn>volume_up</ng-template>
+      <ng-template #VolOff>volume_off</ng-template>
+    </button>
+    <button routerLink="/home" routerLinkActive="active" appStyles>Quit</button>
+    <p>Score:</p>
+  </nav>
+  <div class="gameScreen" (click)="playGame()">
+    <img src="../../assets/passaro.png" alt="flappy">
+  </div>
+</div>

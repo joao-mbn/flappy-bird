@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <div class="container">
+      <nav>
+        <button routerLink="/play" routerLinkActive="active"
+          (click)="onClickPlay()" [ngClass]="playButtonClass"
+          class="material-icons playBtn">
+          play_arrow
+        </button>
+        <button routerLink="/menu" routerLinkActive="active"
+          (click)="onClickMenu()" [ngClass]="menuButtonClass"
+          class="material-icons">
+          settings
+        </button>
+      </nav>
+  </div>
+</mat-toolbar>

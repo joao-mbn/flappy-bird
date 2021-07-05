@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="volume">
+    <input (click)="adjustVolume()" type="range" min="0" max="100" value="50" class="slider" id="slider">
+    <button class="VolumeBtn">Volume</button>
+  </div>
+  <h2>Playing {{musicName}}</h2>
+  <nav>
+    <button routerLink="/home" routerLinkActive="active" class="SaveBtn">Save</button>
+    <button routerLink="/home" routerLinkActive="active" class="BackBtn">Back</button>
+  </nav>
+</div>

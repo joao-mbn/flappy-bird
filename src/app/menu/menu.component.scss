@@ -1,0 +1,82 @@
+h2 {
+  color: rgb(95, 95, 95);
+  font-family: VT323;
+}
+
+nav {
+  width: 100%;
+  height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+button {
+  font-size: 2rem;
+  width: 100px;
+  height: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, auto);
+}
+
+.SaveBtn {
+  grid-column-start: 1;
+}
+
+.BackBtn {
+  grid-column-start: 3;
+  justify-self: end;
+}
+
+.VolumeBtn {
+  margin-left: 20px;
+}
+
+.volume {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 80%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: white; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: rgb(82, 57, 226); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(82, 57, 226); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
